@@ -23,7 +23,7 @@ def test_computer_get_info():
     computer = Computer("TestMachine", mem_obj, disk_space_obj)
     
     info = computer.get_info()
-    pattern = r"\[\w+\]: computer name: TestMachine, available memory: \w+, available storage: \w+"
+    pattern = r"\[\w+.\w+\]: computer name: TestMachine, available memory: \w+.\w+, available storage: \w+.\w+"
     assert re.match(pattern, info), "DMACC Student, the get_info method does not return the expected string format."
 
 # Test to run main and check for 3 printed outputs
